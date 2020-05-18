@@ -1,3 +1,3 @@
 # Topic 
-1. MBS
-2. Big Query with Google Analytic 
+1. **MBS**
+2. **Big Query with Google Analytic** 
