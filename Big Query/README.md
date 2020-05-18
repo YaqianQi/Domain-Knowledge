@@ -3,7 +3,7 @@
    - **Standard**: preferred used in big query 
    - **Legacy**: like normal database
 2. **Some Syntax** 
-   - **Date 
+   - **Date** 
       - Unit: DAY, WEEK, ISOWEEK, MONTH, QUARTER, YEAR 
       - Current day: CURRENT_DATE() 
       - **DATE_SUB**: Subtracts a specified time interval from a DATE.
@@ -46,7 +46,7 @@
         FROM
         `bigquery-public-data.google_analytics_sample.ga_sessions_*`,
         UNNEST(hits) as hits ```
-    - Bounce rate: the percentage of visits with a single pageview
+    - **Bounce rate: the percentage of visits with a single pageview**
       ```
       SELECT
       trafficSource.source AS source,
@@ -78,8 +78,7 @@
       fullVisitorId )
      ```
    - **What is the average amount of money/time spent per session in July 2017?**
-     ```
-     #standardSQL
+      ```
       SELECT
       ( SUM(total_transactionrevenue_per_user) / SUM(total_visits_per_user) ) AS
       avg_revenue_by_user_per_visit
@@ -97,11 +96,9 @@
       AND totals.transactions >= 1
       AND totals.transactionRevenue IS NOT NULL
       GROUP BY
-      fullVisitorId )
-     ```
-    - What is the sequence of pages viewed?.
-    ```
-    -- traffic details 
+      fullVisitorId )```
+  - **What is the sequence of pages viewed?**
+      ```
       SELECT
       fullVisitorId,
       visitId,
@@ -119,9 +116,7 @@
       fullVisitorId,
       visitId,
       visitNumber,
-      hitNumber 
-
-    
+      hitNumber
     ```
      
    
